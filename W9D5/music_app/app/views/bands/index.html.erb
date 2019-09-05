@@ -1,0 +1,18 @@
+<section class="band-index-holder">
+  <nav>
+    <h1><font size="6" color="Black"> Bands </font></h1>
+    <a href="<%= new_band_url %>">
+      Add Band
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    </a>
+  </nav>
+  <section class="band-index">
+    <% @bands.each do |band| %>
+      <div class="band-index-item">
+        <div>
+          <br /><a href="<%= band_url(band) %>">See Band: <%= band.name %></a>
+        </div>
+      </div>
+    <% end %>
+  </section>
+</section>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>NinetyNineCats</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+
+    <h1>
+      <%= logged_in? ? current_user.username : nil %>
+      <% if logged_in? %>
+        <button type="button" >
+        Logout
+        <% link_to "session_url", :controller=> "sessions", :action=> "destroy"%>
+        </button>
+
+        <button>
+        
+        </button>
+
+      <% end%>
+    </h1>
+  
+    <%= yield %>
+  </body>
+</html>

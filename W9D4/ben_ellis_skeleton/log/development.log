@@ -1,0 +1,738 @@
+  [1m[35m (0.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ninety_nine_cats_development"[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ninety_nine_cats_test"[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (393.7ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_development" ENCODING = 'unicode'[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (267.2ms)[0m  [1m[35mCREATE DATABASE "ninety_nine_cats_test" ENCODING = 'unicode'[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35mSQL (0.3ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cat_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.2ms)[0m  [1m[35mCREATE TABLE "cat_rental_requests" ("id" bigserial primary key, "cat_id" integer NOT NULL, "end_date" date NOT NULL, "start_date" date NOT NULL, "status" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE  INDEX  "index_cat_rental_requests_on_cat_id" ON "cat_rental_requests"  ("cat_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170714042724)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170713053554),
+(20170713053709);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-29 21:39:05.854532"], ["updated_at", "2019-08-29 21:39:05.854532"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "cat_rental_requests" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "cat_rental_requests" ("id" bigserial primary key, "cat_id" integer NOT NULL, "end_date" date NOT NULL, "start_date" date NOT NULL, "status" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE  INDEX  "index_cat_rental_requests_on_cat_id" ON "cat_rental_requests"  ("cat_id")[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "cats" CASCADE[0m
+  ↳ db/schema.rb:28
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "cats" ("id" bigserial primary key, "birth_date" date NOT NULL, "color" character varying NOT NULL, "name" character varying NOT NULL, "sex" character varying NOT NULL, "description" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:28
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20170714042724)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20170713053554),
+(20170713053709);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-08-29 21:39:05.922167"], ["updated_at", "2019-08-29 21:39:05.922167"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Update (0.3ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-08-29 21:39:05.925483"], ["key", "environment"]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+Migrating to CreateUsers (20190829220301)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190829220301_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190829220301"]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.rbenv/versions/2.5.1/bin/annotate:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(723150122408807205)[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+Migrating to AddIndextoUser (20190829220904)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (10.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_session_token" ON "users"  ("session_token")[0m
+  ↳ db/migrate/20190829220904_add_indexto_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190829220904"]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(723150122408807205)[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.gem/ruby/2.5.0/gems/rake-12.3.3/lib/rake/task.rb:273
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.rbenv/versions/2.5.1/bin/annotate:23
+Started GET "/users/new" for ::1 at 2019-08-29 16:11:54 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/bee/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 3.3ms)
+
+
+
+SyntaxError - syntax error, unexpected '.'
+ method = (.persisted? ? :patch : :post) 
+           ^:
+  app/views/users/new.html.erb:2:in `'
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/23f844a6e5df9efa/variables" for ::1 at 2019-08-29 16:11:54 -0700
+Started GET "/users/new" for ::1 at 2019-08-29 16:13:49 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (367.2ms)
+Completed 500 Internal Server Error in 369ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `action' for #<#<Class:0x000055ce8bccc180>:0x000055ce8bfe34e0>
+Did you mean?  action_name:
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb__2460206701002595799_69999041485440'
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/2ac3aa7b20702f81/variables" for ::1 at 2019-08-29 16:13:50 -0700
+Started GET "/users/new" for ::1 at 2019-08-29 16:14:16 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (449.1ms)
+Completed 500 Internal Server Error in 451ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `action' for #<#<Class:0x000055ce8bccc180>:0x00007f53e49cd710>
+Did you mean?  action_name:
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb__2460206701002595799_69999147245800'
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/b32440a1e4e3a2af/variables" for ::1 at 2019-08-29 16:14:17 -0700
+Started GET "/users/new" for ::1 at 2019-08-29 16:16:22 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]:
+  app/views/users/new.html.erb:4:in `_app_views_users_new_html_erb__2460206701002595799_69999071133100'
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/8f87bc9c95ffae03/variables" for ::1 at 2019-08-29 16:16:22 -0700
+Started GET "/users/new" for ::1 at 2019-08-29 16:16:27 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (342.9ms)
+Completed 500 Internal Server Error in 345ms (ActiveRecord: 0.0ms)
+
+
+
+NameError - undefined local variable or method `user' for #<#<Class:0x000055ce8bccc180>:0x00007f53db882788>
+Did you mean?  @user:
+  app/views/users/new.html.erb:10:in `_app_views_users_new_html_erb__2460206701002595799_69999071068380'
+  app/controllers/users_controller.rb:11:in `new'
+
+Started POST "/__better_errors/b48205e1221b7cd0/variables" for ::1 at 2019-08-29 16:16:28 -0700
+Started GET "/users/new" for ::1 at 2019-08-29 16:16:51 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 549ms (Views: 549.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2019-08-29 16:17:28 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:17:29 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms)
+
+
+
+ArgumentError - wrong number of arguments (given 2, expected 0..1):
+  app/controllers/users_controller.rb:15:in `create'
+
+Started POST "/__better_errors/f6137cedc6350a24/variables" for ::1 at 2019-08-29 16:17:29 -0700
+Started POST "/users" for ::1 at 2019-08-29 16:19:09 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 292ms (Views: 17.3ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:19:15 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 252ms (Views: 10.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:20:08 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 266ms (Views: 11.7ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:20:10 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 263ms (Views: 14.7ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:20:12 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 264ms (Views: 11.9ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:20:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 259ms (Views: 14.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:08 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 401 Unauthorized in 265ms (Views: 12.9ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 401 Unauthorized in 254ms (Views: 11.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:25 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 401 Unauthorized in 256ms (Views: 13.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:28 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.4ms)
+Completed 401 Unauthorized in 261ms (Views: 11.2ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:45 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 401 Unauthorized in 252ms (Views: 12.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:51 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.5ms)
+Completed 401 Unauthorized in 256ms (Views: 13.1ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:21:54 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.8ms)
+Completed 401 Unauthorized in 258ms (Views: 12.7ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:22:44 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.6ms)
+Completed 401 Unauthorized in 265ms (Views: 14.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:22:49 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.7ms)
+Completed 401 Unauthorized in 268ms (Views: 24.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:23:27 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 401 Unauthorized in 264ms (Views: 18.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/new" for ::1 at 2019-08-29 16:23:39 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:23:44 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 401 Unauthorized in 257ms (Views: 13.7ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:26:01 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (2.0ms)
+Completed 401 Unauthorized in 258ms (Views: 14.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:26:04 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 401 Unauthorized in 261ms (Views: 16.2ms | ActiveRecord: 2.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:26:08 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.4ms)
+  Rendered users/new.html.erb within layouts/application (2.2ms)
+Completed 401 Unauthorized in 262ms (Views: 15.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/new" for ::1 at 2019-08-29 16:26:12 -0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered users/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 15ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:26:14 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 401 Unauthorized in 263ms (Views: 18.9ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:26:49 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (4.5ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 265ms (ActiveRecord: 1.2ms)
+
+
+
+NoMethodError - undefined method `each' for "Wrong password/ username":String:
+  app/views/shared/_errors.html.erb:3:in `_app_views_shared__errors_html_erb__4335915920203338589_69999074613720'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__2460206701002595799_69999050009080'
+  app/controllers/users_controller.rb:20:in `create'
+
+Started POST "/__better_errors/4d8f5b6bfa012c6c/variables" for ::1 at 2019-08-29 16:26:50 -0700
+Started POST "/users" for ::1 at 2019-08-29 16:26:58 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (4.4ms)
+  Rendered users/new.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 252ms (ActiveRecord: 1.6ms)
+
+
+
+NoMethodError - undefined method `each' for "Wrong password/ username":String:
+  app/views/shared/_errors.html.erb:3:in `_app_views_shared__errors_html_erb__4335915920203338589_69999044072320'
+  app/views/users/new.html.erb:3:in `_app_views_users_new_html_erb__2460206701002595799_69999043437600'
+  app/controllers/users_controller.rb:20:in `create'
+
+Started POST "/__better_errors/03579e41635ff08c/variables" for ::1 at 2019-08-29 16:26:58 -0700
+Started POST "/__better_errors/03579e41635ff08c/eval" for ::1 at 2019-08-29 16:27:28 -0700
+Started POST "/__better_errors/03579e41635ff08c/eval" for ::1 at 2019-08-29 16:27:35 -0700
+Started POST "/__better_errors/03579e41635ff08c/eval" for ::1 at 2019-08-29 16:27:50 -0700
+Started POST "/users" for ::1 at 2019-08-29 16:28:47 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+Completed 500 Internal Server Error in 263ms (ActiveRecord: 4.6ms)
+
+
+
+NoMethodError - undefined method `full_meesages' for #<ActiveModel::Errors:0x00007f53e6452248>
+Did you mean?  full_message
+               full_messages:
+  app/controllers/users_controller.rb:19:in `create'
+
+Started POST "/__better_errors/0ffe2ede98a95ee1/variables" for ::1 at 2019-08-29 16:28:48 -0700
+Started POST "/users" for ::1 at 2019-08-29 16:29:09 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.2ms)
+  Rendered users/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 267ms (Views: 12.9ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:29:13 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 265ms (Views: 17.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:29:21 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 255ms (Views: 13.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users" for ::1 at 2019-08-29 16:29:22 -0700
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"username"=>"Bee", "password"=>"[FILTERED]"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Bee"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:16
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:16
+  Rendering users/new.html.erb within layouts/application
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered users/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 257ms (Views: 12.2ms | ActiveRecord: 1.4ms)
+
+

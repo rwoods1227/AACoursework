@@ -1,0 +1,22 @@
+<% cat1 = @cat %>
+
+<table>
+    <tbody>
+        <tr>
+            <td>id</td>
+            <td>Birth Year</td>
+            <td>Color</td>
+            <td>Name</td>
+            <td>Sex</td>
+            <td>Description</td>
+        </tr>
+        <tr>
+            <td><%= cat1.id %></td>
+            <td><%= cat1.birth_date.year %></td>
+            <td><%= cat1.color %></td>
+            <td><%= cat1.name %></td>
+            <td><%= cat1.sex %></td>
+            <td><%= cat1.description %></td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,22 @@
+<% #action = (user.persisted? ? user_url(user) : users_url) %>
+<% #method = (.persisted? ? :patch : :post) %>
+<%= render 'shared/errors' %>
+
+<form action="<%= users_url %>" method="post">
+  <label for="username">Name</label>
+  <input
+    type="text"
+    name="user[username]"
+    id="username"
+    value="<%= @user.username %>">
+
+  <label for="user_password">Password</label>
+  <input
+    type="password"
+    name="user[password]"
+    id="user_password"
+    value="<%= @user.password %>">
+  <br>
+
+  <input type="submit">
+</form>

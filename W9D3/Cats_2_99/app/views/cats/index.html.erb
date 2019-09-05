@@ -1,0 +1,17 @@
+<h1>Cats</h1>
+<table>
+  <tbody>
+    <tr>
+    </tr>
+    <% @cats.each do |cat| %>
+    <tr>
+      <td><%= cat.id %></td>
+      <td >
+        <a href="<%=cat_url(cat.id) %>"> <%= cat.name %> </a>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<!-- @cats.first.atrributes.keys - Cat.protected_attributes.to_a -->
