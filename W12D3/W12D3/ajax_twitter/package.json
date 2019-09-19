@@ -1,0 +1,13 @@
+{
+  "name": "ajax_twitter",
+  "private": true,
+  "scripts": {
+    "postinstall": "webpack --mode=development",
+    "webpack": "webpack --mode=development --watch"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

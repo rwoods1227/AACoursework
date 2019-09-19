@@ -1,0 +1,44 @@
+/* PHASE 9: Forms */
+.form-group{
+  display: flex;
+  flex: flex-wrap;
+}
+
+.form {
+  margin: 0 0 20px 0;
+}
+
+.form-thumb{
+  display: flex;
+}
+
+.form-fieldset{
+  display: flex;
+  padding: 19px;
+  margin: 0 0 0 20px;
+  width: 500px;
+  background: #eee;
+  border: 1 px solid #ccc;
+  border-radius: 5px;
+}
+
+.input{
+margin: 0 0 20px 0;
+}
+.input > label{
+  display: block;
+  font-weight: 700;
+  padding: 0 0 5px 0;
+}
+
+.input > input, .input > textarea{
+  display: block;
+  background: #fff;
+  border: 1 px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  width: calc(100% - 22px);
+}
+.submit {
+ test;
+}
