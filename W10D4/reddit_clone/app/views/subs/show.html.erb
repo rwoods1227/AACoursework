@@ -1,0 +1,13 @@
+<h1>Your  S U B</h1>
+
+<p>Title: <%= @sub.title %></p>
+
+<p><a href="<%= new_sub_post_url(@sub.id) %>"> Make a Post!</a></p>
+<br>
+
+<% @sub.posts.each do |post| %>
+  <p>Post Id: <%= post.id %></p>
+  <p>Post title: <%= post.title %></p>
+  <p>Post content: <%= post.content %></p>
+  <br>
+<% end %>
