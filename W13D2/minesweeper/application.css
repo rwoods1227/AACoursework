@@ -1,0 +1,34 @@
+.tile {
+    width: 25px;
+    height: 25px;
+    border-width: 2px;
+    background-color: lightgray;
+    border-style: outset;
+    /* padding-left: 3px; */
+    text-align: center;
+    line-height: 25px;
+}
+.grid {
+    display: flex;
+}
+
+.explored {
+    border-style: inset;
+}
+
+.modal-screen{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal-text{
+    position: relative;
+    top: 30%;
+    left: 40%;
+}
